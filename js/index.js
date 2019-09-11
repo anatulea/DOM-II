@@ -92,14 +92,14 @@ const headerNewEl = document.querySelector('.nav-container');
         const newForm = document.createElement('form');
         newForm.action='/action_page.php';
 
-            const imputForm = document.createElement('imput');
+            const imputForm = document.createElement('input');
                 imputForm.type ='text';
                 imputForm.style.padding ='7px';
                 imputForm.style.paddingRight='60px'
                 imputForm.style.border ='1px solid #aaa';
-                imputForm.placeholder='Search ';
+                imputForm.placeholder='Search destination...';
                 imputForm.name ='search';
-                imputForm.textContent='Search destination...';
+                imputForm.textContent='';
                 imputForm.style.fontSize ='1.5rem';
             newForm.appendChild(imputForm);  
 
@@ -107,7 +107,6 @@ const headerNewEl = document.querySelector('.nav-container');
                  buttonForm.type ='submit';
                  buttonForm.style.float ='right';
                  buttonForm.style.padding = '6px';
-                 buttonForm.style.marginTop = '-10px';
                  buttonForm.style.marginRight='16px';
                  buttonForm.style.background='#ddd';
                  buttonForm.fontSize='17px';
@@ -124,7 +123,7 @@ const headerNewEl = document.querySelector('.nav-container');
 //-------search box and button------
 
 imputForm.addEventListener('focus', (event) => {
-  event.target.style.background = 'pink';    
+  event.target.style.background = 'LightCyan';    
 });
 
 imputForm.addEventListener('blur', (event) => {
