@@ -80,7 +80,9 @@ buttonLow.forEach((button)=>{
       let scale = 1;
       const el = document.querySelector('.intro h2');
       el.onwheel = zoom; 
-      
+
+
+//-------search box and button------>
 const headerNewEl = document.querySelector('.nav-container');
    
     const newDiv = document.createElement('div');
@@ -119,4 +121,25 @@ const headerNewEl = document.querySelector('.nav-container');
        newDiv.appendChild(newForm);
     headerNewEl.appendChild(newDiv);
 
-    
+//-------search box and button------
+
+imputForm.addEventListener('focus', (event) => {
+  event.target.style.background = 'pink';    
+});
+
+imputForm.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+});
+
+
+document.addEventListener('wheel', (event) => {
+    event.target.style.color = "teal";
+    event.target.style.backgroundColor= "yellow";
+  }); 
+
+  
+ document.addEventListener('copy',cb);
+
+ function cb(){
+     alert("You can't copy this!!");
+ } 
